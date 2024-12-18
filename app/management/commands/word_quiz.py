@@ -32,8 +32,3 @@ class Command(BaseCommand):
                     new_display[i] = user_input
 
             self.display = "".join(new_display)
-
-        if "_" not in self.display:
-            self.stdout.write(self.style.SUCCESS(f'ゲームクリア! 答え: {self.answer}'))
-        else:
-            self.stdout.write(self.style.ERROR(f'ゲームオーバー 答え: {self.answer}'))
